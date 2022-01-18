@@ -1,65 +1,111 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.9)  2 NOV 2021 14:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.25)  18 JAN 2022 16:29
 entering extended mode
-**./report.tex
-(report.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-09-03>
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrreprt.
-cls
-Document Class: scrreprt 2020/09/21 v3.32 KOMA-Script document class (report)
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/D073497/SAPDevelop/private/seminar21/report/latex/report.tex
+(/Users/D073497/SAPDevelop/private/seminar21/report/latex/report.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2021/03/17 v3.33 KOMA-Script document class (report)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2021/03/17 v3.33 KOMA-Script package (file load hooks)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2021/03/17 v3.33 KOMA-Script package (using LaTeX hooks)
 
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.
-sty
-Package: scrkbase 2020/09/21 v3.32 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
+LaTeX3 Info: Defining command \BeforeFile with sig. 'm' on line 61.
 
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.s
-ty
-Package: scrbase 2020/09/21 v3.32 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
 
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.
-sty
-Package: scrlfile 2020/09/21 v3.32 KOMA-Script package (file load hooks)
+LaTeX3 Info: Defining command \AfterFile with sig. 'm' on line 65.
 
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-
-patcholdlatex.sty
-Package: scrlfile-patcholdlatex 2020/09/21 v3.32 KOMA-Script package (patching 
-old LaTeX kernels)
 
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.s
-ty
-Package: scrlogo 2020/09/21 v3.32 KOMA-Script package (logo)
-))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpa
-rse.sty
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2020-09-03 L3 programming layer (loader) 
+LaTeX3 Info: Defining command \BeforeClass with sig. 'm' on line 69.
 
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-p
-dftex.def
-File: l3backend-pdftex.def 2020-09-01 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count168
-\l__pdf_internal_box=\box45
-))
-Package: xparse 2020-05-15 L3 Experimental document command parser
 
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpa
-rse-generic.tex
-\l__xparse_current_arg_int=\count169
-\g__xparse_grabber_int=\count170
-\l__xparse_m_args_int=\count171
-\l__xparse_v_nesting_int=\count172
-)))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+LaTeX3 Info: Defining command \BeforePackage with sig. 'm' on line 73.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfClass with sig. 'smo+m' on line 83.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfPackage with sig. 'smo+m' on line
+(LaTeX3)     93.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterClass with sig. 'smo+m' on line
+(LaTeX3)     173.
+
+
+LaTeX3 Info: Defining command \AfterClass with sig. '' on line 174.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterPackage with sig. 'smo+m' on line
+(LaTeX3)     191.
+
+
+LaTeX3 Info: Defining command \AfterPackage with sig. '' on line 192.
+
+
+LaTeX3 Info: Defining command \ReplaceInput with sig. '' on line 193.
+
+
+LaTeX3 Info: Defining command \ReplaceClass with sig. 'mm' on line 196.
+
+
+LaTeX3 Info: Defining command \ReplacePackage with sig. 'mm' on line 199.
+
+
+LaTeX3 Info: Defining command \UnReplaceInput with sig. '' on line 200.
+
+
+LaTeX3 Info: Defining command \UnReplaceClass with sig. 'm' on line 203.
+
+
+LaTeX3 Info: Defining command \UnReplacePackage with sig. 'mm' on line 206.
+
+
+LaTeX3 Info: Defining command \PreventPackageFromLoading with sig. 's+om' on
+(LaTeX3)     line 234.
+
+
+LaTeX3 Info: Defining command \StorePreventPackageFromLoading with sig. 'm' on
+(LaTeX3)     line 242.
+
+
+LaTeX3 Info: Defining command \ResetPreventPackageFromLoading with sig. '' on
+(LaTeX3)     line 247.
+
+
+LaTeX3 Info: Defining command \UnPreventPackageFromLoading with sig. 'sm' on
+(LaTeX3)     line 261.
+
+
+LaTeX3 Info: Defining command \BeforeClosingMainAux with sig. 'om' on line
+(LaTeX3)     274.
+
+
+LaTeX3 Info: Defining command \AfterReadingMainAux with sig. 'om' on line 287.
+
+
+LaTeX3 Info: Defining command \protected@immediate@write with sig. 'm+m+m' on
+(LaTeX3)     line 298.
+
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2021/03/17 v3.33 KOMA-Script package (logo)
+))) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
-)))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.
-sty
-Package: tocbasic 2020/09/21 v3.32 KOMA-Script package (handling toc-files)
+)
+Skipping: [2021/05/01] Usage of raw option list on input line 252.
+Applying: [0000/00/00] compatibility for LaTeX before 2021/05/01 on input line 337.
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2021/03/17 v3.33 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip47
-\scr@dte@tocline@numbox=\box46
+\scr@dte@tocline@numbox=\box47
 )
 Package tocbasic Info: babel extension for `toc' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 137.
@@ -69,19 +115,13 @@ Package scrreprt Info: You've used standard option `10pt'.
 (scrreprt)             If you'd like to set the option with \KOMAoptions,
 (scrreprt)             you'd have to use `fontsize=10pt' there
 (scrreprt)             instead of `10pt', too.
-Class scrreprt Info: File `scrsize10pt.clo' used to setup font sizes on input l
-ine 2434.
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize10
-pt.clo
-File: scrsize10pt.clo 2020/09/21 v3.32 KOMA-Script font size class option (10pt
-)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.
-sty
-Package: typearea 2020/09/21 v3.32 KOMA-Script package (type area)
+Class scrreprt Info: File `scrsize10pt.clo' used to setup font sizes on input line 2451.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
+File: scrsize10pt.clo 2021/03/17 v3.33 KOMA-Script font size class option (10pt)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2021/03/17 v3.33 KOMA-Script package (type area)
 \ta@bcor=\skip48
-\ta@div=\count173
+\ta@div=\count179
 Package typearea Info: You've used standard option `a4paper'.
 (typearea)             This is correct!
 (typearea)             Internally I'm using `paper=a4'.
@@ -108,226 +148,131 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 10.0pt
 (typearea)              \footskip       = 42.0pt
 (typearea)              \baselineskip   = 12.0pt
-(typearea)              on input line 1740.
+(typearea)              on input line 1741.
 )
-\c@part=\count174
-\c@chapter=\count175
-\c@section=\count176
-\c@subsection=\count177
-\c@subsubsection=\count178
-\c@paragraph=\count179
-\c@subparagraph=\count180
+\c@part=\count180
+\c@chapter=\count181
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@subparagraph=\count186
 \scr@dte@chapter@maxnumwidth=\skip53
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\chapter on input line 5627.
+(scrreprt)           for `\chapter on input line 5678.
 \scr@dte@section@maxnumwidth=\skip54
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\section on input line 5638.
+(scrreprt)           for `\section on input line 5689.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\section on input line 5638.
+(scrreprt)           for `\section on input line 5689.
 \scr@dte@part@maxnumwidth=\skip55
 Class scrreprt Info: using compatibility default `afterindent=true'
-(scrreprt)           for `\part on input line 5647.
+(scrreprt)           for `\part on input line 5698.
 \scr@dte@subsection@maxnumwidth=\skip56
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subsection on input line 5657.
+(scrreprt)           for `\subsection on input line 5708.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subsection on input line 5657.
+(scrreprt)           for `\subsection on input line 5708.
 \scr@dte@subsubsection@maxnumwidth=\skip57
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subsubsection on input line 5667.
+(scrreprt)           for `\subsubsection on input line 5718.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subsubsection on input line 5667.
+(scrreprt)           for `\subsubsection on input line 5718.
 \scr@dte@paragraph@maxnumwidth=\skip58
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\paragraph on input line 5678.
+(scrreprt)           for `\paragraph on input line 5729.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\paragraph on input line 5678.
+(scrreprt)           for `\paragraph on input line 5729.
 \scr@dte@subparagraph@maxnumwidth=\skip59
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subparagraph on input line 5688.
+(scrreprt)           for `\subparagraph on input line 5739.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subparagraph on input line 5688.
+(scrreprt)           for `\subparagraph on input line 5739.
 \abovecaptionskip=\skip60
 \belowcaptionskip=\skip61
-\c@pti@nb@sid@b@x=\box47
+\c@pti@nb@sid@b@x=\box48
 Package tocbasic Info: babel extension for `lof' omitted
-(tocbasic)             because of missing \bbl@set@language on input line 6925.
-
+(tocbasic)             because of missing \bbl@set@language on input line 6976.
 \scr@dte@figure@maxnumwidth=\skip62
-\c@figure=\count181
+\c@figure=\count187
 Package tocbasic Info: babel extension for `lot' omitted
-(tocbasic)             because of missing \bbl@set@language on input line 6942.
-
+(tocbasic)             because of missing \bbl@set@language on input line 6993.
 \scr@dte@table@maxnumwidth=\skip63
-\c@table=\count182
-Class scrreprt Info: Redefining `\numberline' on input line 7111.
-\bibindent=\dimen134
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
+\c@table=\count188
+Class scrreprt Info: Redefining `\numberline' on input line 7162.
+\bibindent=\dimen138
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/ucs\utf8x.def
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
-))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucs.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-global.def
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
-\uc@secondtry=\count183
+\uc@secondtry=\count189
 \uc@combtoks=\toks18
 \uc@combtoksb=\toks19
 \uc@temptokena=\toks20
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2020/09/01 3.48 The Babel package
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
-File: babel.def 2020/09/01 3.48 Babel common definitions
-\babel@savecnt=\count184
-\U@D=\dimen135
-\l@babelnohyphens=\language79
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/03/03 3.55 The Babel package
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/03/03 3.55 Babel common definitions
+\babel@savecnt=\count190
+\U@D=\dimen139
+\l@babelnohyphens=\language86
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count185
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english
-.ldf
+\bbl@dirlevel=\count191
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
 Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language73) on input line 105.
+(babel)             (\language21) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language73) on input line 108.
-))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+(babel)             (\language21) on input line 108.
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics
-.cfg
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.d
-ef
-File: pdftex.def 2020/08/26 v1.2 Graphics/color driver for pdftex
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen136
-\Gin@req@width=\dimen137
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count186
-\calc@Bcount=\count187
-\calc@Adimen=\dimen138
-\calc@Bdimen=\dimen139
+\calc@Acount=\count192
+\calc@Bcount=\count193
+\calc@Adimen=\dimen142
+\calc@Bdimen=\dimen143
 \calc@Askip=\skip64
 \calc@Bskip=\skip65
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count188
+\calc@Ccount=\count194
 \calc@Cskip=\skip66
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
-
-LaTeX Warning: You have requested release `2020-10-01' of LaTeX,
-               but only release `2020-02-02' is available.
-
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen140
-\ESO@tempdimb=\dimen141
-! Undefined control sequence.
-<argument> \nointerlineskip \AddToHook 
-                                       {shipout/background}{\put (0,\ESO@yof...
-l.188 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.188 }
-       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Undefined control sequence.
-<argument> \ESO@yoffsetI 
-                         
-l.188 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... \ESO@HookIIBG \@empty }}\AddToHook 
-                                                  {shipout/foreground}{\put ...
-l.188 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \ESO@yoffsetI 
-                         
-l.188 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+\ESO@tempdima=\dimen144
+\ESO@tempdimb=\dimen145
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
-g
-Overfull \hbox (72.58482pt too wide) in paragraph at lines 188--2
-[]\OT1/cmr/m/n/10 shipout/background[]shipout/foreground[]                     
-                                                                               
-               
- []
-
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -341,72 +286,68 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ))
-\AM@pagewidth=\dimen142
-\AM@pageheight=\dimen143
-\AM@fboxrule=\dimen144
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
+\AM@pagewidth=\dimen146
+\AM@pageheight=\dimen147
+\AM@fboxrule=\dimen148
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2021/03/06 v0.5t Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count189
-\AM@pagebox=\box48
+\pdfpages@includegraphics@status=\count195
+\AM@pagebox=\box49
 \AM@global@opts=\toks21
-\AM@pagecnt=\count190
+\AM@pagecnt=\count196
 \AM@toc@title=\toks22
-\c@AM@survey=\count191
-\AM@templatesizebox=\box49
-) (C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+\c@AM@survey=\count197
+\AM@templatesizebox=\box50
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen145
-\ar@mcellbox=\box50
-\extrarowheight=\dimen146
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen149
+\ar@mcellbox=\box51
+\extrarowheight=\dimen150
 \NC@list=\toks23
 \extratabsurround=\skip67
 \backup@length=\skip68
-\ar@cellbox=\box51
+\ar@cellbox=\box52
 )
-\TX@col@width=\dimen147
-\TX@old@table=\dimen148
-\TX@old@col=\dimen149
-\TX@target=\dimen150
-\TX@delta=\dimen151
-\TX@cols=\count192
+\TX@col@width=\dimen151
+\TX@old@table=\dimen152
+\TX@old@col=\dimen153
+\TX@target=\dimen154
+\TX@delta=\dimen155
+\TX@cols=\count198
 \TX@ftn=\toks24
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip69
 \bibsep=\skip70
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count193
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+\c@NAT@ctr=\count199
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTleft=\skip71
 \LTright=\skip72
 \LTpre=\skip73
 \LTpost=\skip74
-\LTchunksize=\count194
-\LTcapwidth=\dimen152
-\LT@head=\box52
-\LT@firsthead=\box53
-\LT@foot=\box54
-\LT@lastfoot=\box55
-\LT@cols=\count195
-\LT@rows=\count196
-\c@LT@tables=\count197
-\c@LT@chunks=\count198
+\LTchunksize=\count266
+\LTcapwidth=\dimen156
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@cols=\count267
+\LT@rows=\count268
+\c@LT@tables=\count269
+\c@LT@chunks=\count270
 \LT@p@ftn=\toks25
 )
 Class scrreprt Info: longtable captions redefined on input line 16.
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
-Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/ms\everysel.sty
-Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
-)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2021/02/05 v3.0 ragged2e Package
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/everysel/everysel.sty
+Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty))
 \CenteringLeftskip=\skip75
 \RaggedLeftLeftskip=\skip76
 \RaggedRightLeftskip=\skip77
@@ -421,353 +362,466 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \RaggedLeftParindent=\skip86
 \RaggedRightParindent=\skip87
 \JustifyingParindent=\skip88
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/base\gloss
-aries.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2020/03/19 v4.46 (NLCT)
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.te
-x
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks26
 \XKV@tempa@toks=\toks27
 )
-\XKV@depth=\count199
+\XKV@depth=\count271
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/mfirstuc\mfirstuc.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2017/11/14 v2.06 (NLCT)
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count266
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count272
 )
 \@glsmfirst=\toks28
 \@glsmrest=\toks29
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/textcase\textcase.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
-) (C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/xfor\xfor.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/xfor/xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-bas
-e.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/datatool/datatool-base.sty
 Package: datatool-base 2019/09/27 v2.32 (NLCT)
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip89
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks30
-\ex@=\dimen153
-))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+\ex@=\dimen157
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen154
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+\pmbraise@=\dimen158
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count267
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count268
-\leftroot@=\count269
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count270
-\DOTSCASE@=\count271
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box56
-\strutbox@=\box57
-\big@size=\dimen155
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count272
-\c@MaxMatrixCols=\count273
+\inf@bad=\count273
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count274
+\leftroot@=\count275
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count276
+\DOTSCASE@=\count277
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box57
+\strutbox@=\box58
+\big@size=\dimen159
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count278
+\c@MaxMatrixCols=\count279
 \dotsspace@=\muskip16
-\c@parentequation=\count274
-\dspbrk@lvl=\count275
+\c@parentequation=\count280
+\dspbrk@lvl=\count281
 \tag@help=\toks31
-\row@=\count276
-\column@=\count277
-\maxfields@=\count278
+\row@=\count282
+\column@=\count283
+\maxfields@=\count284
 \andhelp@=\toks32
-\eqnshift@=\dimen156
-\alignsep@=\dimen157
-\tagshift@=\dimen158
-\tagwidth@=\dimen159
-\totwidth@=\dimen160
-\lineht@=\dimen161
+\eqnshift@=\dimen160
+\alignsep@=\dimen161
+\tagshift@=\dimen162
+\tagwidth@=\dimen163
+\totwidth@=\dimen164
+\lineht@=\dimen165
 \@envbody=\toks33
 \multlinegap=\skip90
 \multlinetaggap=\skip91
 \mathdisplay@stack=\toks34
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/substr\substr.sty
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count279
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-fp.
-sty
+\c@su@anzahl=\count285
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/datatool/datatool-fp.sty
 Package: datatool-fp 2019/09/27 v2.32 (NLCT)
- (C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp.sty
 Package: fp 1995/04/02
-
-`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\defpattern.sty
+ `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count280
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-basic.sty
+\actioncount=\count286
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count281
-\FP@xia=\count282
-\FP@xib=\count283
-\FP@xfa=\count284
-\FP@xfb=\count285
-\FP@rega=\count286
-\FP@regb=\count287
-\FP@regs=\count288
-\FP@times=\count289
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-addons.sty
+\FP@xs=\count287
+\FP@xia=\count288
+\FP@xib=\count289
+\FP@xfa=\count290
+\FP@xfb=\count291
+\FP@rega=\count292
+\FP@regb=\count293
+\FP@regs=\count294
+\FP@times=\count295
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-snap.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-snap.sty
 Package: fp-snap 1995/04/05
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-exp.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-exp.sty
 Package: fp-exp 1995/04/03
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-trigo.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-trigo.sty
 Package: fp-trigo 1995/04/14
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-pas.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-pas.sty
 Package: fp-pas 1994/08/29
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-random.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count290
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eqn.sty
+\FPseed=\count296
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-upn.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-upn.sty
 Package: fp-upn 1996/10/21
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eval.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fp/fp-eval.sty
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks35
-\@dtl@tmpcount=\count291
+\@dtl@tmpcount=\count297
 \dtl@tmplength=\skip92
-\dtl@sortresult=\count292
-\@dtl@numgrpsepcount=\count293
-\@dtl@datatype=\count294
-\dtl@codeA=\count295
-\dtl@codeB=\count296
-\@dtl@foreach@level=\count297
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/base\gloss
-aries-compatible-307.sty
+\dtl@sortresult=\count298
+\@dtl@numgrpsepcount=\count299
+\@dtl@datatype=\count300
+\dtl@codeA=\count301
+\dtl@codeB=\count302
+\@dtl@foreach@level=\count303
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-307.sty
 Package: glossaries-compatible-307 2020/03/19 v4.46 (NLCT)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/tracklang\tracklang.s
-ty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tracklang/tracklang.sty
 Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/tracklang\tracklang
-.tex))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator
-.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/tracklang/tracklang.tex)) (/usr/local/texlive/2020/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/glossaries-english\gl
-ossaries-english.ldf
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/glossaries-english/glossaries-english.ldf
 File: glossaries-english.ldf 2014/11/23 v1.0
 )
-\gls@level=\count298
+\gls@level=\count304
 \@gls@tmpb=\toks36
 \gls@tmplen=\skip93
 \glskeylisttok=\toks37
 \glslabeltok=\toks38
 \glsshorttok=\toks39
 \glslongtok=\toks40
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glo
-ssary-hypernav.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
 Package: glossary-hypernav 2020/03/19 v4.46 (NLCT)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glo
-ssary-list.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
 Package: glossary-list 2020/03/19 v4.46 (NLCT)
 \glslistdottedwidth=\skip94
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glo
-ssary-long.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
 Package: glossary-long 2020/03/19 v4.46 (NLCT)
 \glsdescwidth=\skip95
 \glspagelistwidth=\skip96
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glo
-ssary-super.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
 Package: glossary-super 2020/03/19 v4.46 (NLCT)
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/supertabular\supertab
-ular.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
-\c@tracingst=\count299
-\ST@wd=\dimen162
+\c@tracingst=\count305
+\ST@wd=\dimen166
 \ST@rightskip=\skip97
 \ST@leftskip=\skip98
 \ST@parfillskip=\skip99
-\ST@pageleft=\dimen163
-\ST@headht=\dimen164
-\ST@tailht=\dimen165
-\ST@pagesofar=\dimen166
-\ST@pboxht=\dimen167
-\ST@lineht=\dimen168
-\ST@prevht=\dimen169
-\ST@toadd=\dimen170
-\ST@dimen=\dimen171
-\ST@pbox=\box58
-))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glo
-ssary-tree.sty
+\ST@pageleft=\dimen167
+\ST@headht=\dimen168
+\ST@tailht=\dimen169
+\ST@pagesofar=\dimen170
+\ST@pboxht=\dimen171
+\ST@lineht=\dimen172
+\ST@prevht=\dimen173
+\ST@toadd=\dimen174
+\ST@dimen=\dimen175
+\ST@pbox=\box59
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2020/03/19 v4.46 (NLCT)
 \glstreeindent=\skip100
-))
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
-ds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
-.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys
-.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefi
-nekeys.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape
-.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmac
-ro.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
-ty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
-)
-\@linkdim=\dimen172
-\Hy@linkcounter=\count300
-\Hy@pagecounter=\count301
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+\@linkdim=\dimen176
+\Hy@linkcounter=\count306
+\Hy@pagecounter=\count307
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel languages
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.s
-ty
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count302
-Package hyperref Info: Hyper figures OFF on input line 4464.
-Package hyperref Info: Link nesting OFF on input line 4469.
-Package hyperref Info: Hyper index ON on input line 4472.
-Package hyperref Info: Plain pages OFF on input line 4479.
-Package hyperref Info: Backreferencing OFF on input line 4484.
+\Hy@SavedSpaceFactor=\count308
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count303
- (C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count309
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen173
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen177
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintca
-lc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count304
-\Field@Width=\dimen174
-\Fld@charsize=\dimen175
-Package hyperref Info: Hyper figures OFF on input line 6347.
-Package hyperref Info: Link nesting OFF on input line 6352.
-Package hyperref Info: Hyper index ON on input line 6355.
-Package hyperref Info: backreferencing OFF on input line 6362.
-Package hyperref Info: Link coloring OFF on input line 6367.
-Package hyperref Info: Link coloring with OCG OFF on input line 6372.
-Package hyperref Info: PDF/A mode OFF on input line 6377.
-LaTeX Info: Redefining \ref on input line 6417.
-LaTeX Info: Redefining \pageref on input line 6421.
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/generic/atbegshi\atbegshi.s
-ty
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+\Fld@menulength=\count310
+\Field@Width=\dimen178
+\Fld@charsize=\dimen179
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
+with kernel methods
 )
-\Hy@abspage=\count305
-\c@Item=\count306
-\c@Hfootnote=\count307
+\Hy@abspage=\count311
+\c@Item=\count312
+\c@Hfootnote=\count313
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
-
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/atveryend\atveryend.s
-ty
-Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
+with kernel methods
 )
-\Fld@listcount=\count308
-\c@bookmark@seq@number=\count309
+\Fld@listcount=\count314
+\c@bookmark@seq@number=\count315
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip101
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 32.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count316
+\l__pdf_internal_box=\box60
+) (/Users/D073497/SAPDevelop/private/seminar21/report/latex/report.aux (/Users/D073497/SAPDevelop/private/seminar21/report/latex/./content/0-Abstract.aux))
+\openout1 = `report.aux'.
 
-(C:\Users\Michael\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
-ilecheck.sty
-Package: rerunfilecheck 201
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+Package scrbase Info: activating english \contentsname on input line 86.
+Package scrbase Info: activating english \listfigurename on input line 86.
+Package scrbase Info: activating english \listtablename on input line 86.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+) (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count317
+\scratchdimen=\dimen180
+\scratchbox=\box61
+\nofMPsegments=\count318
+\nofMParguments=\count319
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen181
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
+\everyMPtoPDFconversion=\toks42
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+) ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 86.
+Package hyperref Info: Link coloring ON on input line 86.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count323
+)
+LaTeX Info: Redefining \ref on input line 86.
+LaTeX Info: Redefining \pageref on input line 86.
+LaTeX Info: Redefining \nameref on input line 86.
+ (/Users/D073497/SAPDevelop/private/seminar21/report/latex/report.out) (/Users/D073497/SAPDevelop/private/seminar21/report/latex/report.out)
+\@outlinefile=\write3
+\openout3 = `report.out'.
+
+Class scrreprt Info: loading recommended package `bookmark'.
+(scrreprt)           Using `bookmark' together with `hyperref' is recommended,
+(scrreprt)           because of handling of possible bookmark level gaps.
+(scrreprt)           You can avoid loading `bookmark' with KOMA-Script option
+(scrreprt)           `bookmarkpackage=false' before \begin{document} and
+(scrreprt)           you can avoid this message adding:
+(scrreprt)             \usepackage{bookmark}
+(scrreprt)           before \begin{document} on input line 86.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count324
+)) [1
+
+
+
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+\openout2 = `./content/0-Abstract.aux'.
+
+ (/Users/D073497/SAPDevelop/private/seminar21/report/latex/./content/0-Abstract.tex [2
+
+
+
+]) (/Users/D073497/SAPDevelop/private/seminar21/report/latex/report.toc)
+\tf@toc=\write4
+\openout4 = `report.toc'.
+
+ (./content/1-Introduction.tex [3
+
+
+
+]
+chapter 1.
+<images/T1Figure01.pdf, id=37, 340.12811pt x 249.55574pt>
+File: images/T1Figure01.pdf Graphic file (type pdf)
+<use images/T1Figure01.pdf>
+Package pdftex.def Info: images/T1Figure01.pdf  used on input line 12.
+(pdftex.def)             Requested size: 221.08064pt x 162.20929pt.
+[4
+
+ </Users/D073497/SAPDevelop/private/seminar21/report/latex/images/T1Figure01.pdf>]) (./content/2-Chapter2.tex [5]
+chapter 2.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)) (./content/3-Chapter3.tex [6
+
+]
+chapter 3.
+) (./content/10-Conclusion.tex [7
+
+]
+chapter 4.
+) [8
+
+]
+chapter 5.
+[9
+
+] (/Users/D073497/SAPDevelop/private/seminar21/report/latex/report.lof)
+\tf@lof=\write5
+\openout5 = `report.lof'.
+
+ [10
+
+] (/Users/D073497/SAPDevelop/private/seminar21/report/latex/report.lot)
+\tf@lot=\write6
+\openout6 = `report.lot'.
+
+ [11
+
+]
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     133.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     133.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     133.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     133.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     133.
+
+ (/Users/D073497/SAPDevelop/private/seminar21/report/latex/report.aux (/Users/D073497/SAPDevelop/private/seminar21/report/latex/./content/0-Abstract.aux))
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 20983 strings out of 479014
+ 362917 string characters out of 5859148
+ 897639 words of memory out of 5000000
+ 38065 multiletter control sequences out of 15000+600000
+ 410022 words of font info for 50 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 111i,10n,116p,10658b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on /Users/D073497/SAPDevelop/private/seminar21/report/latex/report.pdf (11 pages, 181799 bytes).
+PDF statistics:
+ 164 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
+
