@@ -1,0 +1,377 @@
+\chapter{Problem Classification from App Store Reviews}
+
+\section{Introduction}\label{sec:02_introduction}
+
+With the ever-growing number of mobile apps, the competition between apps with similar functionality also increases. To differentiate themselves from the competition, developers are constantly trying to improve their apps. One way to do this is to incorporate the user feedback in the form of app reviews. These reviews are directly included in the app stores and can provide valuable information, such as bug descriptions or feature requests. However, app reviews are mostly unstructured text data. The manual analysis of them can be a time-consuming task, considering that some apps receive thousands of reviews per day or are maintained by small teams with few resources. Therefore, there is a need for tools that automatically analyze the content of app store reviews so that developers can process user feedback faster and easier. 
+
+In the given article \textit{Analyzing reviews and code of mobile apps for better release planning} \cite{Ciurumelea.2017}, Ciurumelea \textit{et al.} describe an approach that deals with this problem. Following on from this article, Section \ref{sec:02_literature_search} first describes the literature search for a further article, dealing with the same problem. Subsequently, Sections \ref{sec:02_approach_1_urr} and \ref{sec:02_approach_2_clap} present the given article and the found article of the literature search in detail. The following section \ref{sec:02_comparison} compares the approaches according to specific synthesis questions. The final section concludes with a summary of the presented topic. The glossary [X] describes any requirements engineering, natural language processing or machine learning terms used or tools referenced in this chapter. 
+
+\section{Literature Search}\label{sec:02_literature_search}
+
+The goal of this literature search is to find one further article that deals with the automatic analysis of classifying app store reviews. Therefore, the following research question is posed:
+
+\textbf{Research Question:} What are the approaches to classify problems and feature requests in app store reviews?
+
+To answer this question, the literature search includes the two search methods \textit{term-based search} and \textit{snowballing}. 
+
+The former searches for specific terms highly relevant concerning the research question in selected search engines. Below, the terms for this literature search are displayed: 
+
+\textit{(Reviews OR "User Review") AND ("App Store" OR "Mobile App" OR App) AND (Issue OR Problem OR Bug OR Feature) AND (Classification OR Identification OR Categorization)}. 
+
+IEEE\footnote{https://ieeexplore.ieee.org/}, ACM\footnote{ https://dl.acm.org/}, Springer\footnote{https://link.springer.com/} and Elsevier\footnote{ https://www.sciencedirect.com/} are leveraged as search engines. The latter search method, \textit{snowballing}, leverages a key article as starting point and consults the references (backward) and citations (forward) of this key article to find another relevant article. The key article in this literature search is \cite{Ciurumelea.2017}. To narrow down the selection of articles found, five relevance criteria are defined. These criteria are listed below:
+
+\begin{enumerate}
+    \item The article was published in the last 5 years.
+    \item The article describes an approach to automatically classify problems and feature requests [X] in app store reviews.
+    \item The article is written in English or German.
+    \item The article is not written by the same authors as the given article.
+    \item The article considers user reviews of several apps.
+\end{enumerate}
+
+
+\autoref{tab:02_literature_search_results} shows the results of the literature search that was performed in November 2021. Each search includes a restriction for articles from the last five years. A \textit{relevant result} fulfills all relevance criteria defined above when looking at the title of the article. \textit{New relevant results} are relevant results not found by previous searches.
+
+\begin{table}
+    \centering
+    \caption{Topic 2 Literature Search Results}
+    \begin{tabular}{l|l|c|c|c} \hline
+        Engine   & Query          & Results   & Relevant Results  & New Relevant Results \\ \hline\hline
+        IEEE            & Snowballing Backward& 54        & 2                 & 2 \\ \hline
+        IEEE            & Snowballing Forward & 41        & 7                 & 7 \\ \hline
+        Elsevier        & Search Terms        & 43        & 0                 & 0 \\ \hline
+        Springer        & Search Terms        & 10        & 0                 & 0 \\ \hline
+        ACM             & Search Terms        & 61        & 8                 & 4 \\ \hline
+        IEEE            & Search Terms        & 42        & 5                 & 3 \\ \hline
+    \end{tabular}
+    \label{tab:02_literature_search_results}
+\end{table}
+
+Using this approach 16 relevant articles are found. A closer look at the abstract of the articles then excludes 11 more articles, which finally leaves five articles. Since only one article is searched, \autoref{tab:02_literature_search_excluded_papers} describes why the four other articles were excluded.
+
+\begin{table}
+    \centering
+    \caption{Topic 2 Literature Search Exclusion Reasons}
+    \begin{tabular}{p{4cm}|l|p{5cm}} \hline
+        Article                                 & Found Where          & Exclusion Reason \\ \hline\hline
+        Predicting an Effective Android Application Release Based on User Reviews and Ratings \cite{Mahmud.2019}& Snowballing Forward & Article classifies into same 18 categories as given article. Contradicts to the goal of finding another classification approach. \\ \hline
+        Too Many User-Reviews! What Should App Developers Look at First? \cite{Noei.2019}                            & Snowballing Forward      & Article primarily focuses on topic extraction from reviews       \\ \hline
+        Convolutional Neural Network Based Classification of App Reviews  \cite{Aslam.2020}                     & Term-based search in IEEE         & Article classifies into few categories and does not perform further steps after classifying.         \\ \hline
+        Information Extraction for Mobile Application User Review \cite{Suprayogi.2018}                         & Term-based search in IEEE        & Article classifies into few categories.           \\ \hline
+    \end{tabular}
+    \label{tab:02_literature_search_excluded_papers}
+\end{table}
+
+Finally, the chosen article is \textit{Listening to the Crowd for the Release Planning of Mobile Apps} by Scalabrino \textit{et al.} \cite{Scalabrino.2019}. This article resembles the given article by first classifying reviews into categories and then performing additional steps with the classified app store reviews, however, it differs sufficiently from the given article in the methodology of these steps.
+
+\section{Approach 1: URR}\label{sec:02_approach_1_urr}
+
+The first approach, User Request Referencer (URR), is described in the given article \textit{Analyzing reviews and code of mobile apps for better release planning} \cite{Ciurumelea.2017} published in 2017. After reviewing the objectives, the algorithm, and the evaluation of the approach including the results, the approach is finally illustrated by providing an example. 
+\subsection{Goal}
+
+The authors of this article observed that the automatic classification of app store reviews into a few unstructured categories is insufficient as developers still need to analyze the review content manually. Therefore, the first goal is to understand what fine-grained topics users address in reviews and to define more granular categories based on these topics. This allows developers to work with directly actionable tasks. The second goal is then to classify app store reviews according to the defined categories. The third and last goal is to locate for a certain review what are the source code files that are likely to be modified to handle the issue described in the review.
+
+\subsection{Algorithm}
+
+The first step is data collection. The complete dataset consists of 7544 reviews from 39 Google Play Store apps. The apps must be written in the Java programming language and must be open source to be able to download the source code of the apps. In total, the 39 apps cover 17 Google Play Store categories (e.g., Development, Finance, or Games) and vary in size to increase the generalizability of the approach. Based on this, the implementation of the three goals is outlined below.
+
+
+\subsubsection{Categories}
+
+The second step is the definition of the categories. A manual analysis of 1566 app store reviews resulted in a total of 18 categories, divided into high-level and low-level categories for higher granularity. \autoref{tab:02_urr_categories} lists and describes all categories. The last high-level category \textit{Complaint} covers only negative reviews.
+
+\begin{table}
+    \centering
+    \caption{URR Categories (based on \cite{Ciurumelea.2017} Table II)}
+    \begin{tabular}{l|l|p{6cm}} \hline
+        High Level Category & Low Level Category & Description \\ \hline\hline
+        \multirow{3}{*}{Compatibility}   & Device            & mentions a specific mobile phone device (i.e. Galaxy 6). \\
+        & Android Version   &  references the OS version. (i.e. Marshmallow). \\
+        & Hardware          & talks about a specific hardware component. \\ \hline
+        \multirow{3}{*}{Usage}   & App Usability            & talks about ease or difficulty in using a feature.\\
+        & UI          & mentions an UI element (i.e. button, menu item). \\ \hline
+        \multirow{3}{*}{Resources}  & Performance          & talks about the performance of the app (slow, fast). \\
+        & Battery          & references related to the battery (i.e. drains battery).\\
+        & Memory          & mentions issues related to the memory (i.e. out of memory).\\ \hline
+        \multirow{3}{*}{Pricing}  & Licensing          & references the licensing model of the app (i.e. free, pro version). \\
+        & Price          & talks about money aspects (i.e. donated 5\$). \\ \hline
+        \multirow{3}{*}{Protection}  & Security          &  talks about security/lack of it.\\
+        & Privacy          & issues related to permissions and user data. \\ \hline
+        Complaint  &           &  mentions problems with the app or general complaints.\\ \hline
+    \end{tabular}
+    \label{tab:02_urr_categories}
+\end{table}
+
+\subsubsection{Classification}
+
+In the next step, the reviews are classified into the previously defined 18 categories. In advance of the classification, the review data is pre-processed. Hereby, only the review text is taken into account, other information like the star rating of a review is ignored. First, the review text is cleaned by removing stop words [X] belonging to the English stop words list and punctuation. Moreover, Stemming [X] is applied with the Porter Stemmer [X] algorithm. Next, this step extracts two kinds of features from the review text, which are necessary for subsequent steps. The first features are the tf-idf scores [X] of each word in the review text. The second feature is n-grams [X], whereas only 2-grams and 3-grams are extracted. At the end of this step, each review has a list of tf-idf scores assigned to it as well as a list of 2-grams and 3-grams. 
+
+For the classification, several Machine Learning methods are compared. Ultimately, the Gradient Boosted Regression Trees (GBRT) [X] method is used as it yielded the best results. 
+The approach supports multi-label classification of reviews. This allows a review to be assigned to multiple categories. This is facilitated by applying the one-vs-all strategy, where each category is trained in a separate classifier. The output of each classifier is whether a review belongs to the corresponding category or not. Consequently, the approach consists of 18 classifiers, and a review is labeled with a list of categories into which it has been classified. Before each classifier is trained, the approach splits the complete dataset of 7544 reviews into 80\% training set and 20\% test set.  
+
+\subsubsection{Source Code Localization}
+
+The fourth step pertains to the localization of source code files of an app that are likely to be modified with respect to the review text. This step refers to the unprocessed review text (before the classification step), which is why a separate data preprocessing is performed. The approach applies Stemming with the Porter Stemmer algorithm and stop words removal including all identifiers from the Java programming language (e.g. \textit{public}, \textit{void}, etc.) to the source code and the review text. Next, the source code files and the review text are indexed into Apache Lucene [X]. This allows determining the textual similarity between documents (reviews and source code) using the Vector Space Model [X] as an Information Retrieval technique. \newline
+Since app store reviews are usually written by non-technical users, this step attempts to assign so-called \textit{structure categories} to the source code files based on the file path. A structure category matches a high-level category from the first goal, whereas no structure category exists for the high-level categories \textit{Pricing} and \textit{Complaint}. For example, if a file path contains \textit{ui} or \textit{resources}, all files in this path are assigned to the \textit{Usage} high level category. This substep is also named \textit{Pre-Localization}.
+Finally, it is possible to search for source code files and reviews in Lucene with a high textual similarity score. If a review and a source code file are both assigned with the same category, the score is boosted.
+
+
+\subsection{Evaluation}
+
+The evaluation of the approach is performed within the following two research questions: 
+
+
+\textbf{Research Question 1:} To what extent does the User Request Referencer organize reviews according to meaningful maintenance and evolution tasks for developers? \newline
+\textbf{Research Question 2:} Does the User Request Referencer correctly recommend the software artifacts that need to be modified in order to handle user requests and complaints?
+
+\subsubsection{Research Question 1}
+
+To measure the accuracy in classifying app store reviews into the defined high and low-level categories, the three machine learning metrics precision [X], recall [X], and F-Measure [X] are utilized. As a dataset, the test set from the first step is leveraged to test each of the 18 classifiers. The test set contains around 1500 reviews representing 20\% of the total dataset size. 
+Since the test set is not labeled, a manual evaluation is required. Therefore, only a subset of 200 randomly selected reviews from the 1500 reviews are considered per category. This results in 3600 reviews for all 18 categories. Two external evaluators then perform the manual evaluation, which finally allows the computation of the previously mentioned three machine learning metrics. In addition, both evaluators are asked about the perceived difficulty of analyzing app store reviews, the potential usefulness of the approach, and the importance of each category.
+
+The approach shows very good results in the classification of high-level categories as well as low-level categories. \autoref{tab:02_urr_results_rq1} summarizes the results of the high-level categories (HLC) and low-level categories (LLC) for all three metrics. Among the high-level categories, the \textit{Protection} category produced the best results in all three metrics, while the \textit{Compatibility} and \textit{Complaint} categories produced the worst results. In the low-level categories, the \textit{Licensing} category performed best and the \textit{Hardware} category performed worst.
+
+\begin{table}
+    \centering
+    \caption{URR Results of Research Question 1}
+    \begin{tabular}{l|c|c|c|c} \hline
+                &  Precision   & Recall & F-Measure & F-Measure Average \\ \hline\hline
+        HLC     & from 71\% to 89\%  & from 80\% to 98\%        & from 82\% to 93\%       & 88\%           \\ \hline
+        LLC     & from 61\% to 92\%  & from 86\% to 98\%        & from 74\% to 94\%    & 86\%             \\
+        \hline
+    \end{tabular}
+    \label{tab:02_urr_results_rq1}
+\end{table}
+
+Furthermore, both evaluators are convinced that the approach can be very useful and could save up to 75\% of the time required for manual analysis. The defined 18 categories are complete and most likely do not miss any useful review categories. The evaluators considered the most important categories to be \textit{Usage}, \textit{Resources}, and \textit{Compatibility} \cite[p. 98]{Ciurumelea.2017}.
+
+\subsubsection{Research Question 2}
+
+The second research question also considers the three machine learning metrics precision, recall, and F-Measure to measure the accuracy of the approach in the source code localization. This task is more time-consuming since it requires the inspection of the app's source code. Therefore, the dataset for this evaluation is a subset of the test set consisting of 91 randomly selected reviews from two apps. The approach then performs the source code localization step with all 91 reviews. One of the evaluators of the previous research question then investigates whether the returned source code files are correct for each review.
+
+The approach achieves promising results in the source code localization step with a precision of 51\%, a recall of 79\%, and an F-Measure of 62\%. It is worth mentioning that there is very little overlap between the technical vocabulary in the source code and the vocabulary of the app store reviews. Additionally, the evaluator notes that reviews expressing a general opinion about the app are difficult to link and that the review quality (number of details, grammar, etc.) can affect the linking between the review and the source code \cite[p. 99]{Ciurumelea.2017}.
+
+\subsection{Example}
+
+\autoref{tab:02_urr_example} illustrates the approach by walking through each step for the following app store review: \textit{Liked it so much I paid the \$3 for the VIP version.}.
+
+\begin{table}
+    \centering
+    \caption{URR Example}
+    \begin{tabular}{l|p{3cm}|p{9cm}} \hline
+            Step  &  Task   &  Description \\ \hline\hline
+        1     & Download & Download of the source code of the app and review text        \\ \hline
+        3     & Stop Words Removal & Review: \textit{Liked I paid \$3 VIP version.}  \\ \hline
+        3     & Punctuation Removal     & Review: \textit{Liked I paid \$3 VIP version}  \\ \hline
+        3     & Stemming                & Review: \textit{Like I paid \$3 VIP version}  \\ \hline
+        3     & tf-idf                  & Adds tf-idf score of each word in the review text as feature. Can not be computed here since the calculation depends on the whole dataset  \\ \hline
+        3     & 2-grams & Adds each of the following 2-grams as features: \textit{Like I, I paid, paid \$3, \$3 VIP, VIP version}\\ \hline
+        3     & 3-grams & Adds each of the following 3-grams as features: \textit{Liked I paid, I paid \$3, paid \$3 VIP, \$3 VIP version}\\ \hline
+        3     & Classification & Predict the categories with each of the 18 GBRT classifiers. Categories of the example review are \textit{Pricing}, \textit{Licensing} and \textit{Price} \\ \hline
+        4     & Stop Words Removal including Java identifiers & Apply on source code. Review: \textit{Liked I paid \$3 VIP version.} \\ \hline
+        4     & Stemming & Apply on source code. Review: \textit{Like I paid \$3 VIP version.} \\ \hline
+        4     & Indexing & Review and source code are indexed in Apache Lucene \\ \hline
+        4     & Pre-Localization & If the file path of a source code file matches the rules for a structure category, the source code file is assigned to a high level category. However, no structure category exists for the high level category of the example review (\textit{Pricing})\\ \hline
+        4     & Search & User performs search by relevance (textual similarity and Pre Localization boosting score).  \\ \hline
+    \end{tabular}
+    \label{tab:02_urr_example}
+\end{table}
+
+\section{Approach 2: CLAP}\label{sec:02_approach_2_clap}
+
+The second approach is called Crowd Listener for releAse Planning (CLAP) and is presented in the found literature search article titled \textit{Listening to the Crowd for the Release Planning of Mobile Apps} from 2019 \cite{Scalabrino.2019}. This article presents an extended version of CLAP. The article \textit{Release planning of mobile apps based on user reviews} from 2016 \cite{Villarroel.2016} presents the initial version of CLAP.
+
+\subsection{Goal}
+
+The goal of the approach is to present a fully-automated solution that identifies bugs or suggests new features from app store reviews with relevance for the next app release. The solution can be divided into three goals and steps. First, the classification of reviews into defined categories is performed, then similar reviews are clustered together and finally, clusters of reviews are prioritized. 
+
+\subsection{Algorithm}
+
+CLAP provides a web application prototype that performs the three steps in the background and visualizes the result in several dashboards to the user.  
+Initially, the required review data is imported from the Google Play Store into the tool. Building upon this, the three steps of the approach are explained below.
+
+\subsubsection{Classification}
+
+The approach classifies app store reviews into the following seven categories:
+\begin{enumerate}
+    \item functional bug report
+    \item suggestion for new feature
+    \item report of performance problems
+    \item report of security issues
+    \item report of excessive energy consumption
+    \item request for usability improvements 
+    \item other (including non-informative reviews)
+\end{enumerate}
+
+The first two and the last category are inherited from the initial version of CLAP \cite{Villarroel.2016}, while the third to the sixth categories are newly introduced with this extended version of CLAP. 
+These four categories include bugs and feature requests related to the non-functional requirements of performance, security, energy consumption, and usability.
+
+Before the classification is performed, the review data is preprocessed. From the provided data, certain categories contain more reviews than others. This leads to the problem of imbalanced data. This is the case when Machine Learning methods classify reviews into more frequent categories since an error in rare categories is more acceptable than an error in frequent categories. As a prevention, the approach utilizes the SMOTE filter [X] to balance the number of reviews across categories in the training set. 
+Next, the approach applies several data cleaning techniques to the review text. First, all negated terms from the review text are removed. For this purpose, CLAP presents an algorithm, which recognizes words like \textit{no} or \textit{don't} and removes the negated terms accordingly. Second, the review text is cleaned by removing words belonging to the English stop words list and applying Stemming with the Porter Stemmer algorithm. 
+Afterward, the approach unifies synonyms across all reviews (e.g. \textit{crash}, \textit{bug} and \textit{error}). Using an existing thesaurus such as WordNet [X] yielded not the best results, hence the authors created a customized dictionary based on a manual analysis of 1000 app store reviews. 
+Moreover, CLAP extracts n-grams, more specifically 2-grams and 4-grams, on the review text. However, the review text is only preprocessed by removing stop words and stemming. Negation removal and synonym unification are not applied to the review text for n-grams, as this could distort the results.
+Finally, the review star rating, the length of the review, and the app store category are extracted as additional features. 
+
+After the preprocessing is done, the app store reviews are classified into the defined seven categories with the Random Forest [X] Machine Learning method implemented in Weka [X]. Each rating is assigned to exactly one category. This is also called single-label classification. 
+        
+\subsubsection{Clustering}
+
+Clustering related reviews can be useful because analyzing many reviews with the same content is time-consuming and contradicts the classification step, and knowing how many users have the same concern helps in the prioritization.
+Only reviews classified as \textit{functional bug report} and \textit{suggestion for new feature} are clustered together as they contain informative content (in comparison to the \textit{other} category) and do not already represent cohesive clusters (in comparison to the \textit{report of security issues}, \textit{report of performance problems}, \textit{report of excessive energy consumption} and \textit{request for usability improvements} categories). 
+The DBSCAN [X] Machine Learning method is leveraged for clustering. As a density-based algorithm, it measures the distance between reviews. To transform the review text into a numerical representation, the approach leverages the Vector Space Model.
+
+\subsubsection{Prioritization}
+
+The last step first extracts four features from the review clusters created in the previous step. Those features are listed below:
+
+\begin{enumerate}
+    \item Number of reviews in the cluster.
+    \item Number of different hardware devices in the cluster.
+    \item Average rating of the cluster. A lower rating indicates a higher priority.
+    \item Difference between the average rating of the cluster and the average rating of the app. A lower difference indicates a higher priority. Negative values are possible.
+\end{enumerate}
+
+The prioritization is performed with the Machine Learning Random Forest method, whereas the method classifies the review cluster into the two priority classes \textit{high} and \textit{low}. The approach prioritizes review clusters from all categories except \textit{other}.
+
+\subsection{Evaluation}
+
+The authors evaluate the approach within the following four research questions:
+
+\textbf{Research Question 1:} How accurate is CLAP in classifying user reviews in the considered categories? \newline
+\textbf{Research Question 2:} How meaningful are the clusters of reviews generated by CLAP? \newline
+\textbf{Research Question 3:} How accurate is the reviews prioritization recommended by CLAP? \newline
+\textbf{Research Question 4:} Would actual developers of mobile applications consider exploiting CLAP for their release planning activities? 
+
+\subsubsection{Research Question 1}
+
+The approach employs three machine learning metrics precision, recall, and F-measure to measure accuracy in classifying app store reviews into the defined seven categories. The dataset includes 3000 manually labeled reviews of 705 apps. To compute the accuracy of the Random Forest classifier, 10-fold cross-validation is used.
+
+The approach shows good results in the classification of reviews into the defined seven categories. Precision ranges from 63\% (\textit{suggestion for new feature}) to 92\% (\textit{other}), recall from 52\% (\textit{report of performance problems}) to 91\% (\textit{other}) and F-Measure from 63\% (\textit{report of performance problems}) to (\textit{other}). The average F-Measure is 86\%. 
+Moreover, the utilization of SMOTE improves the F-Measure by 8\% each for the \textit{report of performance problems} and \textit{request for usability improvements} category. However, SMOTE is not helpful for the lowest represented category \textit{report of security issues}.
+
+\subsubsection{Research Question 2}
+
+The dataset consists of 200 ratings from five apps, with each app having 20 ratings in the categories of \textit{function error report} and \textit{suggestion for a new function}. The expected review clusters are created manually for each app and compared to the computed review clusters of the approach. For the comparison, CLAP utilizes the MoJoFM distance. This metric compares two partitions A and B by computing the operations that are necessary to transform A into B. A score of 100\% indicates that the two partitions are equal while a score of 0\% indicates that the two partitions are far apart.
+
+CLAP achieves good results in the clustering step. The MoJoFM score for the \textit{functional bug report category} category is 75\% and 83\% for the \textit{suggestion for new feature} category showing a high similarity between the clusters created by CLAP and the manually created clusters.
+
+\subsubsection{Research Question 3}
+
+In order to determine if prioritizing reviews into the categories \textit{high} and \textit{low} is correct, CLAP verifies for reviews written for a release $r_i$ whether they were implemented in release $r_{i+1}$ (i.e., high priority reviews) or whether they were ignored/postponed instead (i.e., low priority reviews). The verification is performed based on metadata of the release $r_{i+1}$. The resulting dataset consists of 463 reviews from 14 apps releases. The first and second steps (classification and clustering) are performed manually for these reviews. 10-fold cross-validation is applied to these review clusters, and the expected priorities are compared to the computed priorities by CLAP with the three machine learning metrics precision, recall, and F-Measure. 
+
+With an average precision, recall, and F-Measure of each 92\%, CLAP performs remarkably well in classifying review clusters into the priority classes \textit{high} and \textit{low}.
+
+
+\subsubsection{Research Question 4}
+
+The last research question conducts semi-structured interviews with project managers of three software companies building Android Apps. 
+Each manager got an introduction into the tool and then could try it out with app store reviews from \textit{Facebook} and \textit{Twitter} (to avoid bias). Finally, each project manager got asked several questions about the usefulness of reviews itself, the defined seven categories, the factors considered for the prioritization, and the usefulness of the prototype.
+
+The project manager feedback is overall very positive in terms of the usefulness of reviews and the prototype, especially when analyzing a high number of reviews. The seven categories also received positive feedback, one project manager suggested adding a category for reviews referring to the licensing (e.g. \textit{free} and \textit{pro} version).
+
+\subsection{Example}
+
+\autoref{tab:02_clap_example} illustrates the approach by walking through each step for the following app store review: \textit{I like this app but you need to add a feature to edit tweets}. This example review has a star rating of 4 and is from the \textit{Twitter} app, which has an average star rating of 3.5. Including the example review, 20 reviews are addressing the same issue from 15 hardware devices with an average rating of 3. 
+
+\begin{table}
+    \centering
+    \caption{CLAP Example}
+    \begin{tabular}{l|p{3cm}|p{9cm}} \hline
+            Step  &  Task   &  Description \\ \hline\hline
+        1     & Download & Download of the review and import into the prototype\\ \hline
+        2     & Negation Removal & Since there are no negations, the review is not changed.  \\ \hline
+        2     & Stop Words List Removal &  Review: \textit{I like app add feature edit tweets} \\ \hline
+        2     & Stemming                &  Review:  \textit{I like app add featur edit tweet}  \\ \hline
+        2     & Unifying synonyms       &  Since there are no synonyms, the review is not changed. \\ \hline
+        2     & 2-grams & Adds each of the following 2-grams as features: \textit{I like, like app, app add, add feature, feature edit, edit tweet} \\ \hline
+        2     & 4-grams & Adds each of the following 4-grams as features: \textit{I like app add, like app add feature, app add feature edit, add feature edit tweet}\\ \hline
+        2     & Extract additional features & Review Star Rating: \textit{4}, Length of Review: \textit{60 characters}, App Store Category: \textit{Social} \\ \hline
+        2     & Classification & Predict the category for the review with the Random Forest classifier. Output for the example review is \textit{suggestion of new feature}  \\ \hline
+        3     & Clustering & Ideally, CLAP clusters all 20 reviews addressing the same issue together.  \\ \hline
+        4     & Extract Review Cluster features of reviews feature & Number of reviews in the cluster: \textit{20}, Number of different hardware devices: \textit{15}, Cluster average rating: \textit{3}, Difference cluster average rating to app average rating: $3-3.5 = - 0.5$ \\ \hline
+        4     & Prioritization & Based on the extracted Review Cluster features, the given cluster is classified as \textit{high} priority. \\ \hline
+    \end{tabular}
+    \label{tab:02_clap_example}
+\end{table}
+
+\section{Comparison}\label{sec:02_comparison}
+
+The presented two articles are compared by first summarizing, then performing a synthesis including the synthesis matrix and finally concludes with the differences and similarities.
+
+\subsection{Summary}
+
+In \textit{Analyzing reviews and code of mobile apps for better release planning} \cite{Ciurumelea.2017}, Ciurumelea \textit{et al.} manually analyze 1566 user reviews to understand which fine-grained topics users address in the reviews. Based on this, they create 18 categories allowing developers to analyze reviews at high and low granularity.  The authors then present the URR prototype, which provides two basic functionalities. The first is the automatic classification of user reviews into the defined 18 categories. The second functionality of URR is to recommend the app source code files that are likely to be modified considering the description of a review. In the end, the evaluation of the approach achieves very good results in classification and promising results in source code localization.
+
+Scalabrino \textit{et al.} present in \textit{Listening to the Crowd for the Release Planning of Mobile Apps} \cite{Scalabrino.2019} the extension of their 2016 article \cite{Villarroel.2016} in which they first introduced the CLAP prototype. This provides a complete solution from the classification of app store reviews, over the clustering of related reviews to the prioritization of the review clusters. Furthermore, CLAP is available as a web application displaying all relevant information collected in the three steps. 
+The evaluation shows that CLAP performs well in classification, clustering, and prioritization.
+
+\subsection{Synthesis}
+
+\subsubsection{Article 1}
+
+The name of the approach is \textit{User Request Referencer (URR)}. It can be divided into the following four steps:
+
+\begin{enumerate}
+    \item \textbf{Data Collection:} The review data and the source code of the corresponding app are downloaded.
+    \item \textbf{Categories:} The next step is the definition of categories that address mobile app specific issues on a granular level. The result are the 18 multi-level categories shown in \autoref{tab:02_urr_categories}.
+    \item \textbf{Classification:} The review data is pre-processed by removing stop words and punctuation, applying Stemming, and extracting tf-idf scores and n-grams. The GBRT Machine Learning method then performs the classification. The approach follows the one-vs-all strategy and thus consists of 18 classifiers that allow multi-label classification.  
+    \item \textbf{Source Code Localization:} The last step addresses the recommendation of source code files that are likely to be modified to handle the issue described in the app store review. Here, the unprocessed review data is preprocessed by applying Stemming and stop words removal including Java programming language keywords. The mapping of the source code files of an app to its app store reviews is accomplished via Apache Lucene and the Vector Space Model Information Retrieval technique.
+\end{enumerate}
+
+A limitation connected to the source code localization is that the approach considered only Java mobile apps. A limitation connected to the classification is that the approach solely considers the review text and not the review rating. Especially for negative reviews, belonging to the Complaint high-level category, the rating is a good indicator. 
+
+In general, the approach aims to support software maintenance and evolution tasks. More specifically, mobile app developers, the stakeholders of the approach, should be supported in the release planning process. 
+
+Moreover, the approach is implemented as a prototype. The source code of the apps is automatically downloaded and the reviews are selected from a given database. The visualization of the results is not supported by the approach.
+
+The approach was manually evaluated within two research questions concerning the classification and source code localization accuracy. In addition, the evaluators are interviewed about the approach. As metrics, both research questions leverage precision, recall, and F-Measure. URR performs very well in classifying reviews into the defined low level (F-Measure from 74\% to 94\% with an average of 86\%) and high level (F-Measure from 82\% to 93\% with an average of 88\%) categories. The source code localization achieves promising results with 51\% precision, 79\% recall, and 62\% F-Measure. The evaluators commented positively on this approach.
+
+\subsubsection{Article 2}
+
+The second approach is called \textit{Crowd Listener for releAse Planning (CLAP)} and consists of a total of three steps: 
+
+\begin{enumerate}
+    \item \textbf{Classification:} The review data is preprocessed by applying SMOTE, removing negated terms and stop words, applying Stemming, unifying synonyms and extracting n-grams, the star rating of a review, the app store category and the review length. Then, the approach classifies reviews into seven categories with the Weka implementation of the Random Forest Machine Learning method. 
+    \item \textbf{Clustering:} Next, related reviews of the \textit{functional bug report} and \textit{suggestion for new feature} categories are clustered together with the DBSCAN Machine Learning method. Other categories are not considered because they are already clustered or are not suitable for clustering. 
+    \item \textbf{Prioritization:} From these review clusters, this step extracts several cluster-related information and then prioritizes the clusters with the Random Forest Machine Learning method. Clusters are either prioritized as \textit{high} or \textit{low}. 
+\end{enumerate}
+
+A limitation of the classification is that it only supports single-label classification, which can be counterproductive as reviews often address several topics or categories.
+
+In general, the approach aims to support software maintenance and evolution tasks. More specifically, mobile app developers, the stakeholders of the approach, should be supported in the release planning process. 
+
+The approach is implemented as a web application prototype, providing a User Interface for easy interaction. Next to some general statistics about the number of reviews or how many apps are imported, the web application has several tabs showing more granular information about the categories. The prototype also supports the automatic import of reviews from the Google Play Store.
+
+The approach was manually evaluated with four research questions. The first three each evaluate one step and the last performs semi-structured interviews with project managers. For the classification step, the metrics precision, recall, and F-Measure are utilized, the clustering step leverages the MoJoFM score, and the prioritization step again uses the three metrics precision, recall, and F-Measure. CLAP performs well in all three steps. In classification with an F-Measure between 63\% and 91\% (average of 86\%), in clustering a MoJoFM score of around 80\% and in prioritization an F-Measure of 92\%. Moreover, the authors received positive feedback on the utilization of the approach in the semi-structured interviews.
+
+
+\subsection{Synthesis Matrix}
+\autoref{tab:02_synthesis_matrix} displays the synthesis matrix for the two considered articles.
+
+\begin{table}
+    \centering
+    \caption{Topic 2 synthesis matrix}
+    \begin{tabular}{l|p{2.5cm}|p{5cm}|p{5cm}} \hline
+        Nr.     & Name                  & URR \cite{Ciurumelea.2017} & CLAP \cite{Scalabrino.2019} \\  \hline\hline
+        3a      & Used methods          & Data preprocessing, n-grams, tf-idf, ML GBRT, IR VSM, Apache Lucene & Data preprocessing, n-grams, SMOTE, WEKA ML Random Forest, ML DBSCAN, IR VSM\\ \hline
+    3b      & Classification Goal       & Classification in 18 high and low level categories and recommending of the app source code files that are likely to be modified with respect to the review text & Classification in seven categories, clustering of related reviews and prioritization of review clusters \\ \hline
+        3c      & Data Requirements and Limitations  & Limitation: only considers review text and Java mobile apps & Limitation: only supports single-label classification\\ \hline
+        4a      & Supported Development Processes                    & 
+        Software maintenance and evolution, release planning & Software maintenance and evolution, release planning\\ \hline
+        4b      & Supported Stakeholders                               & App developers & App developers\\ \hline
+        5a      & Tool Support/Prototype                               & Approach provides prototype & Approach provides web application prototype with UI \\ \hline
+        5b      & Degree of Automation                            & Completely automated. The source code is automatically downloaded& 
+        Completely automated. Reviews can be directly imported from the Google Play Store\\ \hline
+        6a      & Evaluation                              & Manual evaluation of classification and source code recommendation & Manual evaluation of classification, clustering and prioritization. Additional interviews about application of the approach\\ \hline
+        6b      & Evaluation Results                          & Classification high level categories F-Measure 82\% to 93\% with average of 88\%, classification low level categories 74\% to 94\% with average of 86\%, source code localization precision 51\%, recall 79\% and F-Measure 62\%. Positive feedback in interviews    & Classification F-Measure 63\% to 91\% with average of 86\%, clustering MoJoFM score of around 80\%, prioritization F-Measure 92\% and positive feedback in interviews \\ \hline
+    \end{tabular}
+    \label{tab:02_synthesis_matrix}
+\end{table}
+
+
+\subsection{Differences \& Similarities}
+
+Both approaches, URR and CLAP, have the same motivation of classifying app store reviews. They both aim to support developers in the release planning process of their mobile apps. The first difference is that URR classifies according to 18 categories and CLAP classifies according to seven categories. Hence, the former is more granular in classifying. Moreover, the URR approach allows multi-label classification whereas the CLAP approach allows only single-label classification. For the classification itself, both use similar preprocessing techniques and Machine Learning methods. The GBRT method of URR and the Random Forest method of CLAP are similar since they build upon the more general Decision Tree [X] Machine Learning method. Another difference in the classification is that CLAP additionally considers the length of the review, the review rating, and the app store category of the review. A further difference is what happens after the classification of the approaches. URR focuses on source code localization and CLAP on clustering and prioritization.
+
+\section{Conclusion}\label{sec:02_conclusion}
+
+The presented approaches both aim to support developers in the release planning process of their mobile apps by automatically classifying app store reviews into specific categories. URR performs the classification in fine-grained categories addressing specific topics users mentioned in reviews. CLAP performs the classification in more general categories addressing specific areas (e.g. bug descriptions or feature requests). Both leverage Machine Learning and Information Retrieval techniques to implement their algorithm. The approaches differ in their steps after the classification. URR localizes the source code files of the app that are likely to be modified by a review while CLAP clusters related reviews and then prioritizes the review clusters. The evaluations of the approaches show good results in the individual steps of the algorithms as well as positive feedback from developers or project managers with mobile app development background.
