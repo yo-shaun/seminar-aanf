@@ -1,0 +1,144 @@
+\chapter{Introduction}
+This chapter contains a problem motivation for the respective chapter, the basic terms necessary to understand the chapter, and a brief description of the structure of the chapter.
+
+Mobile application reviews often contain helpful opinions such as bug reports or suggestions. These reviews can mainly drive further user-specific software development. User opinions are presented as unstructured app store reviews \cite{Vu, Guzman}. The  analysis of thousands of reviews in the mobile app sector is ineffective and time-consuming but still mandatory through the nature of the unstructured reviews. E.g., agile development needs fast access to knowledge about user experiences to plan and execute further iterations.
+
+Now that we clarified the motivation and basic terms, we describe the structure of this thesis. To begin with, the literature search procedure is evaluated in Chapter \ref{chap:2}. This includes the research questions, established relevance criteria, and search methodology and results (statistics, search table, selected papers). Chapter \ref{chap:3} and \ref{chap:4} contain descriptions of the approaches as well as their application in each case. The chapters contain the respective exact goal of the approaches, which methods are used, how the results look, and finally, the evaluation of the approach. Afterward, we compare the approaches using the synthesis matrix as shown in Figure \ref{fig:synthesisMatrix} in Chapter \ref{chap:5}. The summary in Chapter \ref{chap:6} contains the statements on the comparison of the approaches, which are then taken up in the report's summary.
+
+\chapter{Literature Search}
+\label{chap:2}
+
+The literature search describes the process of finding articles for a particular context. First, we describe a research question for which we seek multiple answers through the found papers. After describing the question, we define our target search sources and the search terms concerning the question chosen above. In the end, we are defining criteria for relevancy for the found papers to choose the final literature.
+
+To begin with, we are looking for literature that answers the following research question: \textit{How, with which analysis goal, and with which quality are opinions classified in app store reviews?}
+
+We use the following two search sources for the literature search: IEEE and ACM. We primarily use these search sources because the topic is in computer science, and on these platforms, we most likely find published literature. In other words, for computer science, the mentioned search sources are simply the standard. Alternatively, we can also include the search sources Springer and Elsevier.
+
+Moreover, we define the following criteria with which we decide the appropriate papers that answer our research question:
+
+\begin{enumerate}
+    \item The article should preferably be written in English because English is the common language when publishing articles about computer science.
+    \item The article should not be older than five years because computer science is fast-evolving science, and the article should still be relevant.
+    \item The article should not be written by the same authors, so we have unbiased opinions.
+    \item The article describes an approach to extract opinions in app store reviews.
+\end{enumerate}
+
+Now that we have defined the fundamental research question, search sources, and search criteria, we describe the literature search procedure in Figure \ref{fig:literatureSearchPlan}. We used combinations of the following query terms: Opinion extraction, opinion mining, opinion identification, app store, and reviews. The first three query terms are synonyms commonly known for opinion extraction. The query terms themselves are chosen to correspond to the context of the question mentioned above. Finally, we identified the eligible articles; we chose the work of Vue et al. \cite{Vu} and Guzman et al. \cite{Guzman} since they fit the research question, defined criteria, and established two different approaches while implementing roughly similar procedures. We describe these two articles and their approaches in the following chapters.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{images/Thema3_LiteratureSearch.png}
+\caption{Literature Search Plan}
+\label{fig:literatureSearchPlan}
+\end{figure}
+
+\chapter{Phrase-based Extraction of User Opinions in Mobile App Reviews}
+\label{chap:3}
+
+\section{Goal}
+
+The work of Vu et al. \cite{Vu} describes an approach to extract user opinions concerning software in a specific domain. In this case, the domain is in the mobile app sector, and the user opinions are presented as unstructured app store reviews. As the noun “user” already implies, every software is usually developed for diverse individuals. Their opinions are crucial because they explicitly refer to what the user is experiencing. These emotions in mind mainly drive the development of user-specific software. Therefore the users can majorly influence an app’s further development or, in other words, an app’s future. The developers can not manually analyze the overall user opinions effectively at a certain amount of users.
+
+The next difficulty arises by identifying this problem: Classifying high quantities of user opinions. Concerning solving or answering this problem, the work established an approach called PUMA, which internally uses part-of-speech (PoS) templates to extract phrases with a custom implemented algorithm and specific techniques for clustering similar user opinions. In summary, PUMA is a module for automated phrase-based extraction and clustering of user opinions. The approach was evaluated with two popular apps where PUMA identified severe problems.
+
+\section{Algorithm}
+As mentioned earlier, the work established an approach called PUMA. Thereby PUMA is an acronym for the works’ title. In the following, we are using the approach as an identifier. PUMA can roughly be grouped into four sections or phases: Preprocessing, Extraction, Analysis, and Clustering.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{images/Thema3_PhraseTemplates.png}
+\caption{Example of phrases extracted from a review \cite{Vu}}
+\label{fig:phraseTemplates}
+\end{figure}
+
+Firstly during preprocessing, PUMA is based upon the PoS tagging functionality called MARK. Moreover, this module identifies and extracts verbs, nouns, and adjectives, removes stopwords, correct misspellings, and enables lemmatization and stemming. Then during extraction, PUMA applies a custom extraction algorithm based upon the initial sentence and its PoS Tags. As shown in Figure \ref{fig:phraseTemplates}, the extraction algorithm divides and filters the initial review into sentences and logical sections, e.g., a sentence has to have at least 20 tags. Furthermore, MARK filters words except those which describe user sentiments.
+
+Afterward, during analysis, the work manually analyzes the extracted phrases before clustering. Finally, while clustering, PUMA established a custom greedy algorithm based on the word2vec pair similarity between the two words of separate sentences. Moreover, PUMA implements a custom soft clustering algorithm to group sentences of specific topics and related sentiments.
+
+PUMA’s only prerequisite is a certain amount and quality of user reviews of specific applications. The approach has no explicit limitations but does not evaluate features in the extraction and analysis process.
+
+The stakeholders are the developers. The approach provides developers with diverse weighted user opinions representing the different opinions and experiences mentioned in the reviews. Therefore, the approaches essentially support the process of bug and feature analyses.
+Besides PUMAs conceptual approach and evaluation, we should also keep in mind the dependencies of third-party tools. As mentioned above, preprocessing is mainly backed by third-party tools. Therefore the foundation of the approach is still custom implemented algorithms, which do not have to be performed manually.
+
+
+\section{Evaluation}
+
+PUMA judged its approach by only using the module on existing datasets and discovering new or critical opinions regarding the evaluation. Thew work chose two popular apps and identified “severe problems,” as shown in Figure \ref{fig:evaluationApproach1}. The authors have not claimed whether the problem’s severance has been proven or if identifying these problems validates proof of concepts.
+
+Finally, the authors clarified PUMA’s most crucial outcome as the proof of concept of its phrase-based approach. Further, PUMA confirms that automated phrase-based extraction of user opinions on a large scale is critical for developers’ bug and feature analyses.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.2]{images/Thema3_EvaluationApproach1.png}
+\caption{Problem Identification in Facebook Messenger and Candy Crush Saga \cite{Vu}}
+\label{fig:evaluationApproach1}
+\end{figure}
+
+
+\chapter{Retrieving Diverse Opinions from App Reviews}
+\label{chap:4}
+
+\section{Goal}
+The goal of Guzman et al. \cite{Guzman} is similar to the motivation mentioned above for the first approach. Extending it also mentions that previous attempts to answer the arising research questions lead to silencing experiences and opinions of minorities. Consequently, the work established an approach called DIVERSE, which internally uses PoS templates but further implements the lexical sentiment analysis tool SentiStrength and different greedy algorithms. DIVERSE represents a shorthand for the diverse opinions in user app store reviews. Finally, the work evaluated reviews of seven different apps from two app stores and, on average, outperformed their chosen baseline approach.
+
+\section{Algorithm}
+As mentioned before, the work of Guzman et al. proposed an approach called DIVERSE. In the following, we are further using the approach as an identifier. We can group the algorithm into four sections: Preprocessing, Extraction, Analysis, and Clustering.
+
+During preprocessing, DIVERSE uses the PoS tagging functionality of the Natural Language Toolkit NLTK for identifying and extracting verbs, nouns, and adjectives, removing stopwords, and finally, lemmatization. Then during extraction, DIVERSE uses the NLTK toolkit for extracting features from opinions described in each user’s sentence. Moreover, every sentence is filtered with less than three features. Each extracted feature will later be adopted for clustering.
+
+Afterward, during analysis, DIVERSE uses the lexical sentiment analysis tool SentiStrength for finding users’ opinions and experiences concerning features. Finally, while clustering, DIVERSE groups sentences according to the extracted features. Further, each cluster is evaluated by the absolute differences between their respective positive and negative sentiment scores within a certain configurable threshold. The tool SentiStrength evaluates these sentiment scores.
+
+The stakeholders of the approach are the developers. The approach provides developers with diverse weighted user opinions representing the different opinions and experiences mentioned in the reviews. Therefore, the approaches essentially support the process of bug and feature analyses. Concerning the dependencies of third-party tools, preprocessing is mainly backed by third-party tools. However, DIVERSE further uses SentiStrength to find users’ opinions and experiences concerning features in the following sections. Therefore the foundation of the approaches is still custom implemented algorithms, which do not have to be performed manually.
+
+\section{Evaluation}
+Regarding the evaluation, DIVERSE covers two research questions:
+
+\begin{enumerate}
+    \item RQ1: \textit{What is the diversity of the reviews retrieved by DIVERSE?}
+    \item RQ2: \textit{What is the impact and usefulness of DIVERSE when analyzing reviews and making decisions concerning the evolution of features?}
+\end{enumerate}
+
+For the first research question, DIVERSE compares two variations against a baseline based on the retrieval of features ($BASE_{FEA}$). $BASE_{FEA}$ implements a greedy algorithm that only considers the reviews’ features and frequency. The feature-sentiment-based approach, DIVERSE, uses the diversification technique with sentence granularity for sentiment estimation. For the second research question, the work executes a study in which two groups of testers analyze a set of reviews for user sentiments, but one group has access to DIVERSE.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{images/Thema3_EvaluationApproach2.png}
+\caption{Perception of the Usefulness among Participants \cite{Guzman}}
+\label{fig:evaluationApproach2}
+\end{figure}
+
+Finally, DIVERSE’s most crucial result is that its created module, in general, outperforms the chosen benchmark. The work, too, illustrates the importance of the research questions by describing potential time saving for developers. As for the study, the perception of the usefulness among participants in Figure \ref{fig:evaluationApproach2} favors DIVERSE.
+
+\chapter{Comparison}
+\label{chap:5}
+
+We have described the approaches of Vue et al. \cite{Vu} and Guzman et al. \cite{Guzman} in Chapter \ref{chap:3} and \ref{chap:4}. Therefore, we are discussing the main differences, as shown in Figure \ref{fig:synthesisMatrix}. First of all, we point out the similarities of the approaches and afterward evaluate the essential differences.
+
+As already mentioned in Chapter \ref{chap:3} and \ref{chap:4}, we structure the works algorithm procedure into four logical sections or phases: Preprocessing, Extraction, Analysis, and Clustering. Thereby, we hope that this will make it easier to compare the different approaches.
+
+Both works support the feature, quality, and bug analysis. Moreover, they support similar stakeholders: Developers and project owners. As for the degree of automation, the approaches are fully automatable, and author-provided prototypes exist in each case. The approaches quantitatively measure diverse user opinions as clusters regarding the classification goal. Still, the work of Guzman et al. \cite{Guzman} further implements feature analysis as a fundamental aspects for clustering the user reviews. As shown in Figure \ref{fig:synthesisMatrix}, the approaches use different software for the preprocessing and extraction. PUMA is based on MARK as a preprocessor, and DIVERSE uses NLTK and SentiStrength.
+
+Further, they both use PoS tags. Finally, in the evaluation, the authors of PUMA clarified its most crucial outcome as the proof of concept of its phrase-based approach. Further, PUMA confirms that automated phrase-based extraction of user opinions on a large scale is critical for developers’ bug and feature analyses. DIVERSE’s most crucial result is that its created module, in general, outperforms the chosen benchmark. They, too, illustrate the importance of the research questions by describing potential time saving for developers.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{images/Thema3_SynthesisMatrix.png}
+\caption{Synthesis Matrix}
+\label{fig:synthesisMatrix}
+\end{figure}
+
+\chapter{Conclusion}
+\label{chap:6}
+
+The approaches initially validated the primary motivation and research question in the context of the results obtained and the evaluation with test groups and case studies, respectively. The fundamental process of the internal algorithms can be broken down into similar steps in both approaches. This facilitates, above all, comparability. However, the main difference is the orientation of the work. As already said above, PUMA is considered proof of concept for the phrase-based extraction with its custom algorithms. This is reflected in the evaluation, carried out rather rudimetrically by resulting case studies. In contrast, DIVERSE instead poses different questions concerning the evaluation and answers them both qualitatively and quantitatively.
+
+Finally, both approaches gave different possible solutions to our underlying problem and gave a good insight into the necessary different steps of the algorithms.
+
+%% Bibliography
+\bibliographystyle{plainnat}
+%\bibliography{literature.bib}%Bibliography file name
+
+\begin{thebibliography}{9}
+\bibitem{Vu} Phong Minh Vu, Hung Viet Pham, Tam The Nguyen, and Tung Thanh Nguyen. 2016. Phrase-based extraction of user opinions in mobile app reviews. In Proceedings of the 31st IEEE/ACM International Conference on Automated Software Engineering. Association for Computing Machinery, New York, NY, USA, 726–731. DOI:https://doi.org/10.1145/2970276.2970365
+\bibitem{Guzman} E. Guzman, O. Aly and B. Bruegge, "Retrieving Diverse Opinions from App Reviews," 2015 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM), 2015, pp. 1-10, doi: 10.1109/ESEM.2015.7321214.
+\end{thebibliography}
